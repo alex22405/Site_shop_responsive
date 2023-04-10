@@ -1,0 +1,148 @@
+/* FONT FACE */
+@font-face {
+	font-family: "Amaranth";
+	src: url("amaranth.otf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*GLOBAL */
+html {font-size: 62.5%} /*EXEMPLE POUR REDUIRE TAILLE POLICE PAR DEFAUT*/
+
+
+body {
+	font-family: "Amaranth, Open Sans", Arial, sans-serif;
+	background-color: #F2F2F2;
+	color: #666;
+	font-size: 1.6rem; /*EXEMPLE POUR AGRANDIR TAILLE POLICE PAR DEFAUT*/
+}
+
+/* header, main, article
+{
+	border: 2px solid black;
+} */
+
+header
+{
+	height: 40vh;
+	margin-bottom: 5vh;
+	background-image: url("../img/background.jpg");
+	background-size: cover;
+	background-position: center top;	
+}
+main
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	min-height: 25vh;	
+	gap: 2vw;
+}
+nav
+{
+	display: flex;
+	/* text-align: right; */
+	justify-content: end;
+	padding: 1vh;
+	background-color: rgb(2, 2, 2);
+}
+nav a
+{
+	margin: 0 1vh 0;
+	text-decoration: none;	
+	color: rgb(251, 251, 251);
+}
+nav a:hover
+{
+	text-decoration: underline;
+	color: rgb(193, 47, 47);
+}
+
+h1
+{
+	text-align: center;	
+	color: white;
+	text-shadow: 1px 1px #000;
+}
+/* article
+{
+	margin-bottom: 2vh;
+} */
+
+.boite-figurine /* figure */
+{
+	margin: 0;
+	text-align: center;	
+}
+
+.boite-figurine img
+{
+	width: 100%;
+}
+
+/************ Méthode 1 *****************/
+/* main:hover article
+{
+	opacity: .5;
+}
+
+main article:hover
+{
+	opacity: 1;
+} */
+
+/********** Méthode 2 ************/
+/* main:hover article
+{
+	opacity: .5;
+}
+
+.switch:hover
+{
+	opacity: 1;
+} */
+
+/*********** Méthode 3 ***************/
+main:hover article:not(:hover)
+{
+	opacity: .5;
+}
+
+
+@media screen and (max-width: 575px)
+{
+	article
+	{
+		width: 100%;
+	}
+}
+@media screen and (min-width: 576px) and (max-width: 767px)
+{
+	article
+	{
+		width: 45%;		
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 991px)
+{
+	article
+	{
+		width:30.33%;		
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1199px)
+{
+	article
+	{
+		width:23%;		
+	}
+}
+@media screen and (min-width: 992px)
+{
+	article
+	{
+		width:23%;		
+	}
+}
